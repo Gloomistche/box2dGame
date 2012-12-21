@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD001EDF1684EB36002FF4FC /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001ED81684EB36002FF4FC /* SneakyButton.m */; };
+		AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDA1684EB36002FF4FC /* SneakyButtonSkinnedBase.m */; };
+		AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDC1684EB36002FF4FC /* SneakyJoystick.m */; };
+		AD001EE21684EB36002FF4FC /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDE1684EB36002FF4FC /* SneakyJoystickSkinnedBase.m */; };
+		AD001EE71684EE64002FF4FC /* joustick.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD001EE41684EE64002FF4FC /* joustick.jpeg */; };
+		AD001EE81684EE64002FF4FC /* joustick2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD001EE51684EE64002FF4FC /* joustick2.jpeg */; };
+		AD001EE91684EE64002FF4FC /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = AD001EE61684EE64002FF4FC /* joystick.png */; };
 		AD8BD9EA167E6D9F00C73F0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8BD9E9167E6D9F00C73F0A /* QuartzCore.framework */; };
 		AD8BD9EC167E6D9F00C73F0A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8BD9EB167E6D9F00C73F0A /* OpenGLES.framework */; };
 		AD8BD9EE167E6D9F00C73F0A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8BD9ED167E6D9F00C73F0A /* OpenAL.framework */; };
@@ -184,6 +191,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD001ED71684EB36002FF4FC /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButton.h; path = Joustick/SneakyButton.h; sourceTree = "<group>"; };
+		AD001ED81684EB36002FF4FC /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyButton.m; path = Joustick/SneakyButton.m; sourceTree = "<group>"; };
+		AD001ED91684EB36002FF4FC /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButtonSkinnedBase.h; path = Joustick/SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
+		AD001EDA1684EB36002FF4FC /* SneakyButtonSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyButtonSkinnedBase.m; path = Joustick/SneakyButtonSkinnedBase.m; sourceTree = "<group>"; };
+		AD001EDB1684EB36002FF4FC /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyJoystick.h; path = Joustick/SneakyJoystick.h; sourceTree = "<group>"; };
+		AD001EDC1684EB36002FF4FC /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyJoystick.m; path = Joustick/SneakyJoystick.m; sourceTree = "<group>"; };
+		AD001EDD1684EB36002FF4FC /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyJoystickSkinnedBase.h; path = Joustick/SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
+		AD001EDE1684EB36002FF4FC /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyJoystickSkinnedBase.m; path = Joustick/SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
+		AD001EE41684EE64002FF4FC /* joustick.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = joustick.jpeg; path = Joustick/joustick.jpeg; sourceTree = "<group>"; };
+		AD001EE51684EE64002FF4FC /* joustick2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = joustick2.jpeg; path = Joustick/joustick2.jpeg; sourceTree = "<group>"; };
+		AD001EE61684EE64002FF4FC /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = joystick.png; path = Joustick/joystick.png; sourceTree = "<group>"; };
 		AD8BD9E5167E6D9F00C73F0A /* Mad Genius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mad Genius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8BD9E9167E6D9F00C73F0A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AD8BD9EB167E6D9F00C73F0A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -567,6 +585,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD001ED51684EAAB002FF4FC /* Joustick */ = {
+			isa = PBXGroup;
+			children = (
+				AD001EE31684EE53002FF4FC /* Images */,
+				AD001ED71684EB36002FF4FC /* SneakyButton.h */,
+				AD001ED81684EB36002FF4FC /* SneakyButton.m */,
+				AD001ED91684EB36002FF4FC /* SneakyButtonSkinnedBase.h */,
+				AD001EDA1684EB36002FF4FC /* SneakyButtonSkinnedBase.m */,
+				AD001EDB1684EB36002FF4FC /* SneakyJoystick.h */,
+				AD001EDC1684EB36002FF4FC /* SneakyJoystick.m */,
+				AD001EDD1684EB36002FF4FC /* SneakyJoystickSkinnedBase.h */,
+				AD001EDE1684EB36002FF4FC /* SneakyJoystickSkinnedBase.m */,
+			);
+			name = Joustick;
+			sourceTree = "<group>";
+		};
+		AD001EE31684EE53002FF4FC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AD001EE41684EE64002FF4FC /* joustick.jpeg */,
+				AD001EE51684EE64002FF4FC /* joustick2.jpeg */,
+				AD001EE61684EE64002FF4FC /* joystick.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		AD8BD9DA167E6D9F00C73F0A = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +647,7 @@
 		AD8BD9FB167E6D9F00C73F0A /* Mad Genius */ = {
 			isa = PBXGroup;
 			children = (
+				AD001ED51684EAAB002FF4FC /* Joustick */,
 				AD8BDC06167E6DA000C73F0A /* AppDelegate.h */,
 				AD8BDC07167E6DA000C73F0A /* AppDelegate.mm */,
 				AD8BDC09167E6DA000C73F0A /* HelloWorldLayer.h */,
@@ -1206,6 +1251,9 @@
 				AD8BDA15167E6D9F00C73F0A /* iTunesArtwork in Resources */,
 				AD8BDB53167E6DA000C73F0A /* ChangeLog in Resources */,
 				AD8BDC16167E6DA000C73F0A /* blocks.png in Resources */,
+				AD001EE71684EE64002FF4FC /* joustick.jpeg in Resources */,
+				AD001EE81684EE64002FF4FC /* joustick2.jpeg in Resources */,
+				AD001EE91684EE64002FF4FC /* joystick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1367,6 +1415,10 @@
 				AD8BDC0E167E6DA000C73F0A /* IntroLayer.mm in Sources */,
 				AD8BDC11167E6DA000C73F0A /* GLES-Render.mm in Sources */,
 				AD8BDC14167E6DA000C73F0A /* PhysicsSprite.mm in Sources */,
+				AD001EDF1684EB36002FF4FC /* SneakyButton.m in Sources */,
+				AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */,
+				AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */,
+				AD001EE21684EB36002FF4FC /* SneakyJoystickSkinnedBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

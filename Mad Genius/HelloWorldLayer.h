@@ -13,6 +13,11 @@
 #import "cocos2d.h"
 #import "Box2D.h"
 #import "GLES-Render.h"
+#import "SneakyButton.h"
+#import "SneakyJoystick.h"
+#import "SneakyButtonSkinnedBase.h"
+#import "SneakyJoystickSkinnedBase.h"
+#import "PhysicsSprite.h"
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -24,8 +29,12 @@
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
 	CCTexture2D *spriteTexture_;	// weak ref
-	b2World* world;					// strong ref
-	GLESDebugDraw *m_debugDraw;		// strong ref
+    // strong ref
+    CCSprite* hero;
+    CGSize screenSize;
+    CGPoint positionOfTheRobot;
+    SneakyJoystick* leftJoystick;
+    SneakyJoystick* rightJoystick;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
