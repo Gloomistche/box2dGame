@@ -28,9 +28,13 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
+	b2World* world;					// strong ref
+	GLESDebugDraw *m_debugDraw;		// strong ref
+
 	CCTexture2D *spriteTexture_;	// weak ref
     // strong ref
-    CCSprite* hero;
+//    CCSprite* hero;
+    PhysicsSprite * hero;
     CGSize screenSize;
     CGPoint positionOfTheRobot;
     SneakyJoystick* leftJoystick;
