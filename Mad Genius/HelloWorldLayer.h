@@ -28,8 +28,10 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-	b2World* world;					// strong ref
-	GLESDebugDraw *m_debugDraw;		// strong ref
+	b2World* world;
+    b2Vec2 gravity;// strong ref
+	
+    GLESDebugDraw *m_debugDraw;		// strong ref
 
 	CCTexture2D *spriteTexture_;	// weak ref
     // strong ref

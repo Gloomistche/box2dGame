@@ -54,7 +54,7 @@ enum {
 		spriteTexture_ = [parent texture];
         
         hero = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,0,32,32)];
-        [self addChild:hero z:0];
+        [self addChild:hero z:1];
         
         hero.position = ccp(s.width/2,s.height/2);
         
@@ -64,31 +64,40 @@ enum {
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(s.width/2/PTM_RATIO, s.height/2/PTM_RATIO);
         b2Body *body = world->CreateBody(&bodyDef);
+        //запрещаем вращение
+        body->SetFixedRotation(YES);
         // Define another box shape for our dynamic body.
+  
         b2PolygonShape dynamicBox;
         dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
         // Define the dynamic body fixture.
+
+ //       b2CircleShape circle;
+  //      circle.m_radius = 16.0/PTM_RATIO;
+
+        
         b2FixtureDef fixtureDef;
         fixtureDef.shape = &dynamicBox;
+ //       fixtureDef.shape = &circle;
         fixtureDef.density = 1.0f;
         fixtureDef.friction = 0.3f;
         body->CreateFixture(&fixtureDef);
         [hero setPhysicsBody:body];
 
         
-        PhysicsSprite* enimes = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(1,1,32,32)];
-        [self addChild:enimes z:1];
+        PhysicsSprite* enimes = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32,0,400,32)];
+        [self addChild:enimes z:0];
         
-        enimes.position = ccp(32,32);
+        enimes.position = ccp(0,0);
         // Define the dynamic body.
         //Set up a 1m squared box in the physics world
         b2BodyDef bodyDef1;
-        bodyDef1.type = b2_dynamicBody;
-        bodyDef1.position.Set(32/PTM_RATIO, 32/PTM_RATIO);
+        bodyDef1.type = b2_staticBody;
+        bodyDef1.position.Set(200/PTM_RATIO, 300/PTM_RATIO);
         b2Body *body1 = world->CreateBody(&bodyDef1);
         // Define another box shape for our dynamic body.
         b2PolygonShape dynamicBox1;
-        dynamicBox1.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+        dynamicBox1.SetAsBox(6.3f, .5f);//These are mid points for our 1m box
         // Define the dynamic body fixture.
         b2FixtureDef fixtureDef1;
         fixtureDef1.shape = &dynamicBox1;
@@ -97,10 +106,34 @@ enum {
         body1->CreateFixture(&fixtureDef1);
         [enimes setPhysicsBody:body1];
 
+       
+        PhysicsSprite* enimes1 = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,32,500,32)];
+        [self addChild:enimes1 z:0];
+        
+        enimes.position = ccp(0,0);
+        // Define the dynamic body.
+        //Set up a 1m squared box in the physics world
+        b2BodyDef bodyDef2;
+        bodyDef2.type = b2_staticBody;
+        bodyDef2.position.Set(600/PTM_RATIO, 270/PTM_RATIO);
+        b2Body *body2 = world->CreateBody(&bodyDef2);
+        // Define another box shape for our dynamic body.
+        b2PolygonShape dynamicBox2;
+        dynamicBox2.SetAsBox(8.3f, .5f);//These are mid points for our 1m box
+        // Define the dynamic body fixture.
+        b2FixtureDef fixtureDef2;
+        fixtureDef2.shape = &dynamicBox2;
+        fixtureDef2.density = 1.0f;
+        fixtureDef2.friction = 0.3f;
+        body2->CreateFixture(&fixtureDef2);
+        [enimes1 setPhysicsBody:body2];
+        
         
         [self addLeftJoystic];
         [self addRightJoystic];
-        [self schedule:@selector(update:) interval:0.01];
+        [self scheduleUpdate];
+
+     //   [self schedule:@selector(update:) interval:0.01];
 
 	}
 	return self;
@@ -111,12 +144,10 @@ enum {
 	
 	CGSize s = [[CCDirector sharedDirector] winSize];
 	
-	b2Vec2 gravity;
-//	gravity.Set(0.0f, -10.0f);
-    	gravity.Set(0.0f, 10.0f);
+    gravity.Set(0.0f, -30.0f);
 	world = new b2World(gravity);
 	// Do we want to let bodies sleep?
-	world->SetAllowSleeping(true);
+	world->SetAllowSleeping(YES);
 	
 	world->SetContinuousPhysics(true);
 	
@@ -173,28 +204,28 @@ enum {
     int32 velocityIterations = 8;
 	int32 positionIterations = 1;	
 	world->Step(dt, velocityIterations, positionIterations);
-    b2Vec2 gravity;
+    CGPoint schaledVelocity=ccpMult(leftJoystick.velocity, 300);
+    CGPoint newposition=ccp(hero.position.x+dt*schaledVelocity.x,hero.position.y+schaledVelocity.y*dt);
     
-    CGPoint schaledVelocity=ccpMult(leftJoystick.velocity, 10);
-/*    if (schaledVelocity.x !=0 && schaledVelocity.y!=0){
-        int xScale;
-        int yScale;
-        if (x>0)
-            xScale = 10;
-        else
-            xScale = -10;
+    //physicSprite
+    if (leftJoystick.velocity.x!=0 || leftJoystick.velocity.y!=0){
+    b2Body *heroBody = [hero getPhysicsBody];
+//    heroBody->SetLinearVelocity(b2Vec2(newposition.x -hero.position.x-gravity.x,newposition.y - hero.position.y+gravity.y));
+    heroBody->SetLinearVelocity(b2Vec2(newposition.x -hero.position.x,newposition.y - hero.position.y));
+//    heroBody->SetTransform(b2Vec2(newposition.x -hero.position.x,newposition.y - hero.position.y), 10);
     }
-    else{
-         gravity.Set(schaledVelocity.x,schaledVelocity.y);
-    }
- */
+
+
+    
+    //обычный спрайт
+    /*    b2Vec2 gravity;
     gravity.Set(schaledVelocity.x,schaledVelocity.y);
     world->SetGravity(gravity);
 
-    // CGPoint newposition=ccp(hero.position.x+dt*schaledVelocity.x,hero.position.y+schaledVelocity.y*dt);
-   // positionOfTheRobot=newposition;
-   // [hero setPosition:newposition];
-    
+     CGPoint newposition=ccp(hero.position.x+dt*schaledVelocity.x,hero.position.y+schaledVelocity.y*dt);
+    positionOfTheRobot=newposition;
+    [hero setPosition:newposition];
+    */
 }
 
 #pragma mark GameKit delegate
@@ -230,6 +261,70 @@ enum {
     joystickbase.position = ccp(screenSize.width-100,100);
     [self addChild:joystickbase];
     rightJoystick = [joystickbase.joystick retain];
+}
+-(void) addNewSpriteAtPosition:(CGPoint)p
+{
+	CCLOG(@"Add sprite %0.2f x %02.f",p.x,p.y);
+	CCNode *parent = [self getChildByTag:kTagParentNode];
+	
+	//We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
+	//just randomly picking one of the images
+	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
+	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
+	PhysicsSprite *sprite = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32 * idx,32 * idy,32,32)];
+	[parent addChild:sprite];
+	
+	sprite.position = ccp( p.x, p.y);
+	
+	// Define the dynamic body.
+	//Set up a 1m squared box in the physics world
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
+	b2Body *body = world->CreateBody(&bodyDef);
+	
+	// Define another box shape for our dynamic body.
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+	
+	// Define the dynamic body fixture.
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &dynamicBox;
+	fixtureDef.density = 1.0f;
+	fixtureDef.friction = 0.3f;
+	body->CreateFixture(&fixtureDef);
+	
+	[sprite setPhysicsBody:body];
+}
+
+- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	//Add a new body/atlas sprite at the touched location
+	for( UITouch *touch in touches ) {
+		CGPoint location = [touch locationInView: [touch view]];
+		
+		location = [[CCDirector sharedDirector] convertToGL: location];
+		
+		[self addNewSpriteAtPosition: location];
+	}
+}
+
+-(void) draw
+{
+	//
+	// IMPORTANT:
+	// This is only for debug purposes
+	// It is recommend to disable it
+	//
+	[super draw];
+	
+	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
+	
+	kmGLPushMatrix();
+	
+	world->DrawDebugData();
+	
+	kmGLPopMatrix();
 }
 
 @end
