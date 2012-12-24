@@ -647,6 +647,8 @@
 		AD8BD9FB167E6D9F00C73F0A /* Mad Genius */ = {
 			isa = PBXGroup;
 			children = (
+				ADA1C9C31688EAB600F7ED1F /* Levels */,
+				ADA1C9C11688EAAB00F7ED1F /* Characters */,
 				AD001ED51684EAAB002FF4FC /* Joustick */,
 				AD8BDC06167E6DA000C73F0A /* AppDelegate.h */,
 				AD8BDC07167E6DA000C73F0A /* AppDelegate.mm */,
@@ -1185,6 +1187,36 @@
 				AD8BDC04167E6DA000C73F0A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADA1C9C11688EAAB00F7ED1F /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1C9C51688EAF200F7ED1F /* Enemies */,
+				ADA1C9C41688EADF00F7ED1F /* MainHero */,
+			);
+			name = Characters;
+			sourceTree = "<group>";
+		};
+		ADA1C9C31688EAB600F7ED1F /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		ADA1C9C41688EADF00F7ED1F /* MainHero */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MainHero;
+			sourceTree = "<group>";
+		};
+		ADA1C9C51688EAF200F7ED1F /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enemies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
