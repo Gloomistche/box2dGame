@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9800AE9E16897D89001804BB /* BaseCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9800AE9D16897D89001804BB /* BaseCharacter.m */; };
 		AD001EDF1684EB36002FF4FC /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001ED81684EB36002FF4FC /* SneakyButton.m */; };
 		AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDA1684EB36002FF4FC /* SneakyButtonSkinnedBase.m */; };
 		AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDC1684EB36002FF4FC /* SneakyJoystick.m */; };
@@ -191,6 +192,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9800AE9C16897D89001804BB /* BaseCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCharacter.h; path = Characters/BaseCharacter.h; sourceTree = "<group>"; };
+		9800AE9D16897D89001804BB /* BaseCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCharacter.m; path = Characters/BaseCharacter.m; sourceTree = "<group>"; };
 		AD001ED71684EB36002FF4FC /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButton.h; path = Joustick/SneakyButton.h; sourceTree = "<group>"; };
 		AD001ED81684EB36002FF4FC /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyButton.m; path = Joustick/SneakyButton.m; sourceTree = "<group>"; };
 		AD001ED91684EB36002FF4FC /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButtonSkinnedBase.h; path = Joustick/SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
@@ -1194,6 +1197,8 @@
 			children = (
 				ADA1C9C51688EAF200F7ED1F /* Enemies */,
 				ADA1C9C41688EADF00F7ED1F /* MainHero */,
+				9800AE9C16897D89001804BB /* BaseCharacter.h */,
+				9800AE9D16897D89001804BB /* BaseCharacter.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -1451,6 +1456,7 @@
 				AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */,
 				AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */,
 				AD001EE21684EB36002FF4FC /* SneakyJoystickSkinnedBase.m in Sources */,
+				9800AE9E16897D89001804BB /* BaseCharacter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
