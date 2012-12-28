@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9800AE9E16897D89001804BB /* BaseCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9800AE9D16897D89001804BB /* BaseCharacter.m */; };
 		AD001EDF1684EB36002FF4FC /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001ED81684EB36002FF4FC /* SneakyButton.m */; };
 		AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDA1684EB36002FF4FC /* SneakyButtonSkinnedBase.m */; };
 		AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = AD001EDC1684EB36002FF4FC /* SneakyJoystick.m */; };
@@ -189,11 +188,21 @@
 		AD8BDC11167E6DA000C73F0A /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8BDC10167E6DA000C73F0A /* GLES-Render.mm */; };
 		AD8BDC14167E6DA000C73F0A /* PhysicsSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8BDC13167E6DA000C73F0A /* PhysicsSprite.mm */; };
 		AD8BDC16167E6DA000C73F0A /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8BDC15167E6DA000C73F0A /* blocks.png */; };
+		ADA32199168B92C7009D0385 /* walkAnim_UntitledSheet-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA32193168B92C7009D0385 /* walkAnim_UntitledSheet-hd.plist */; };
+		ADA3219A168B92C7009D0385 /* walkAnim_UntitledSheet-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA32194168B92C7009D0385 /* walkAnim_UntitledSheet-hd.png */; };
+		ADA3219B168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA32195168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.plist */; };
+		ADA3219C168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA32196168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.png */; };
+		ADA3219D168B92C7009D0385 /* walkAnim_UntitledSheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA32197168B92C7009D0385 /* walkAnim_UntitledSheet.plist */; };
+		ADA3219E168B92C7009D0385 /* walkAnim_UntitledSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA32198168B92C7009D0385 /* walkAnim_UntitledSheet.png */; };
+		ADF1E178168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E172168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.plist */; };
+		ADF1E179168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E173168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.png */; };
+		ADF1E17A168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E174168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-ipadhd.plist */; };
+		ADF1E17B168A1B1100D15FB3 /* stonesTexrutes_UntitledSheethd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E175168A1B1100D15FB3 /* stonesTexrutes_UntitledSheethd.png */; };
+		ADF1E17C168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E176168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.plist */; };
+		ADF1E17D168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF1E177168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9800AE9C16897D89001804BB /* BaseCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCharacter.h; path = Characters/BaseCharacter.h; sourceTree = "<group>"; };
-		9800AE9D16897D89001804BB /* BaseCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCharacter.m; path = Characters/BaseCharacter.m; sourceTree = "<group>"; };
 		AD001ED71684EB36002FF4FC /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButton.h; path = Joustick/SneakyButton.h; sourceTree = "<group>"; };
 		AD001ED81684EB36002FF4FC /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SneakyButton.m; path = Joustick/SneakyButton.m; sourceTree = "<group>"; };
 		AD001ED91684EB36002FF4FC /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SneakyButtonSkinnedBase.h; path = Joustick/SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
@@ -566,6 +575,18 @@
 		AD8BDC12167E6DA000C73F0A /* PhysicsSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsSprite.h; sourceTree = "<group>"; };
 		AD8BDC13167E6DA000C73F0A /* PhysicsSprite.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSprite.mm; sourceTree = "<group>"; };
 		AD8BDC15167E6DA000C73F0A /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		ADA32193168B92C7009D0385 /* walkAnim_UntitledSheet-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "walkAnim_UntitledSheet-hd.plist"; path = "Resources/Images/HeroAnimation/walkAnim_UntitledSheet-hd.plist"; sourceTree = "<group>"; };
+		ADA32194168B92C7009D0385 /* walkAnim_UntitledSheet-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walkAnim_UntitledSheet-hd.png"; path = "Resources/Images/HeroAnimation/walkAnim_UntitledSheet-hd.png"; sourceTree = "<group>"; };
+		ADA32195168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "walkAnim_UntitledSheet-ipadhd.plist"; path = "Resources/Images/HeroAnimation/walkAnim_UntitledSheet-ipadhd.plist"; sourceTree = "<group>"; };
+		ADA32196168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walkAnim_UntitledSheet-ipadhd.png"; path = "Resources/Images/HeroAnimation/walkAnim_UntitledSheet-ipadhd.png"; sourceTree = "<group>"; };
+		ADA32197168B92C7009D0385 /* walkAnim_UntitledSheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = walkAnim_UntitledSheet.plist; path = Resources/Images/HeroAnimation/walkAnim_UntitledSheet.plist; sourceTree = "<group>"; };
+		ADA32198168B92C7009D0385 /* walkAnim_UntitledSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walkAnim_UntitledSheet.png; path = Resources/Images/HeroAnimation/walkAnim_UntitledSheet.png; sourceTree = "<group>"; };
+		ADF1E172168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "stonesTexrutes_UntitledSheet-hd.plist"; path = "Resources/Images/stonesTexrutes_UntitledSheet-hd.plist"; sourceTree = "<group>"; };
+		ADF1E173168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stonesTexrutes_UntitledSheet-hd.png"; path = "Resources/Images/stonesTexrutes_UntitledSheet-hd.png"; sourceTree = "<group>"; };
+		ADF1E174168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "stonesTexrutes_UntitledSheet-ipadhd.plist"; path = "Resources/Images/stonesTexrutes_UntitledSheet-ipadhd.plist"; sourceTree = "<group>"; };
+		ADF1E175168A1B1100D15FB3 /* stonesTexrutes_UntitledSheethd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stonesTexrutes_UntitledSheethd.png; path = Resources/Images/stonesTexrutes_UntitledSheethd.png; sourceTree = "<group>"; };
+		ADF1E176168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = stonesTexrutes_UntitledSheet.plist; path = Resources/Images/stonesTexrutes_UntitledSheet.plist; sourceTree = "<group>"; };
+		ADF1E177168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stonesTexrutes_UntitledSheet.png; path = Resources/Images/stonesTexrutes_UntitledSheet.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -673,6 +694,7 @@
 		AD8BD9FC167E6D9F00C73F0A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADF1E170168A1AFD00D15FB3 /* Images */,
 				AD8BD9FD167E6D9F00C73F0A /* Default.png */,
 				AD8BD9FF167E6D9F00C73F0A /* Default-Landscape~ipad.png */,
 				AD8BDA01167E6D9F00C73F0A /* fps_images.png */,
@@ -1197,8 +1219,6 @@
 			children = (
 				ADA1C9C51688EAF200F7ED1F /* Enemies */,
 				ADA1C9C41688EADF00F7ED1F /* MainHero */,
-				9800AE9C16897D89001804BB /* BaseCharacter.h */,
-				9800AE9D16897D89001804BB /* BaseCharacter.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -1222,6 +1242,41 @@
 			children = (
 			);
 			name = Enemies;
+			sourceTree = "<group>";
+		};
+		ADA32190168B926D009D0385 /* HeroAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				ADA32192168B9277009D0385 /* WalkAnim */,
+			);
+			name = HeroAnimation;
+			sourceTree = "<group>";
+		};
+		ADA32192168B9277009D0385 /* WalkAnim */ = {
+			isa = PBXGroup;
+			children = (
+				ADA32193168B92C7009D0385 /* walkAnim_UntitledSheet-hd.plist */,
+				ADA32194168B92C7009D0385 /* walkAnim_UntitledSheet-hd.png */,
+				ADA32195168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.plist */,
+				ADA32196168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.png */,
+				ADA32197168B92C7009D0385 /* walkAnim_UntitledSheet.plist */,
+				ADA32198168B92C7009D0385 /* walkAnim_UntitledSheet.png */,
+			);
+			name = WalkAnim;
+			sourceTree = "<group>";
+		};
+		ADF1E170168A1AFD00D15FB3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ADA32190168B926D009D0385 /* HeroAnimation */,
+				ADF1E172168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.plist */,
+				ADF1E173168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.png */,
+				ADF1E174168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-ipadhd.plist */,
+				ADF1E175168A1B1100D15FB3 /* stonesTexrutes_UntitledSheethd.png */,
+				ADF1E176168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.plist */,
+				ADF1E177168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1291,6 +1346,18 @@
 				AD001EE71684EE64002FF4FC /* joustick.jpeg in Resources */,
 				AD001EE81684EE64002FF4FC /* joustick2.jpeg in Resources */,
 				AD001EE91684EE64002FF4FC /* joystick.png in Resources */,
+				ADF1E178168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.plist in Resources */,
+				ADF1E179168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-hd.png in Resources */,
+				ADF1E17A168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet-ipadhd.plist in Resources */,
+				ADF1E17B168A1B1100D15FB3 /* stonesTexrutes_UntitledSheethd.png in Resources */,
+				ADF1E17C168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.plist in Resources */,
+				ADF1E17D168A1B1100D15FB3 /* stonesTexrutes_UntitledSheet.png in Resources */,
+				ADA32199168B92C7009D0385 /* walkAnim_UntitledSheet-hd.plist in Resources */,
+				ADA3219A168B92C7009D0385 /* walkAnim_UntitledSheet-hd.png in Resources */,
+				ADA3219B168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.plist in Resources */,
+				ADA3219C168B92C7009D0385 /* walkAnim_UntitledSheet-ipadhd.png in Resources */,
+				ADA3219D168B92C7009D0385 /* walkAnim_UntitledSheet.plist in Resources */,
+				ADA3219E168B92C7009D0385 /* walkAnim_UntitledSheet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,7 +1523,6 @@
 				AD001EE01684EB36002FF4FC /* SneakyButtonSkinnedBase.m in Sources */,
 				AD001EE11684EB36002FF4FC /* SneakyJoystick.m in Sources */,
 				AD001EE21684EB36002FF4FC /* SneakyJoystickSkinnedBase.m in Sources */,
-				9800AE9E16897D89001804BB /* BaseCharacter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

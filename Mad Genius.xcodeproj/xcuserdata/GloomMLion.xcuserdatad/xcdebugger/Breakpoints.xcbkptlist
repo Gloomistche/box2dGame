@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Mad Genius/HelloWorldLayer.mm"
-         timestampString = "377986233.211146"
+         timestampString = "378248060.498609"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Mad Genius/HelloWorldLayer.mm"
-         timestampString = "377986233.211146"
+         timestampString = "378248060.498609"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "293"
-         endingLineNumber = "293"
+         startingLineNumber = "372"
+         endingLineNumber = "372"
          landmarkName = "-addNewSpriteAtPosition:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,63 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Mad Genius/HelloWorldLayer.mm"
-         timestampString = "377986233.211146"
+         timestampString = "378248060.498609"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
+         startingLineNumber = "274"
+         endingLineNumber = "274"
+         landmarkName = "-update:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Mad Genius/libs/cocos2d/CCSprite.m"
+         timestampString = "378153028.895432"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
+         landmarkName = "+spriteWithSpriteFrameName:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Mad Genius/HelloWorldLayer.mm"
+         timestampString = "378153334.27805"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Mad Genius/HelloWorldLayer.mm"
+         timestampString = "378248060.498609"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "281"
+         endingLineNumber = "281"
+         landmarkName = "-update:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Mad Genius/HelloWorldLayer.mm"
+         timestampString = "378248060.498609"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "288"
+         endingLineNumber = "288"
          landmarkName = "-update:"
          landmarkType = "5">
       </FileBreakpoint>

@@ -50,12 +50,58 @@ enum {
 		CGSize s = [CCDirector sharedDirector].winSize;
         [self initPhysics];
 
+        
+        CCSpriteBatchNode *sceneSpriteBatchNode;
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"stonesTexrutes_UntitledSheet-ipadhd.plist"];
+        sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile: @"stonesTexrutes_UntitledSheet.png"];
+        [self addChild:sceneSpriteBatchNode z:0];
+        
+
+        CCSpriteBatchNode *parent = sceneSpriteBatchNode;
+		spriteTexture_ = [parent texture];
+        
+
+        CCSpriteBatchNode *heroSpriteBatchNode;
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"walkAnim_UntitledSheet-hd.plist"];
+        heroSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile: @"walkAnim_UntitledSheet-hd.png"];
+        [self addChild:heroSpriteBatchNode z:1];
+        
+        
+        hero = [PhysicsSprite spriteWithSpriteFrameName:@"walk0001"];
+        [self addChild:hero z:1];
+
+        
+        // create the animation
+        NSMutableArray* animationArray = [NSMutableArray new];
+        
+        for (int x = 1; x < 19; x++) {
+            CCSpriteFrame *frame;
+            if (x<10){
+                frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"walk000%i",x]];
+            }else{
+                frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"walk00%i",x]];                
+            }
+			//	CCSpriteFrame *frame = [CCSpriteFrame spriteWithSpriteFrameName:@"walk0001"];
+				[animationArray addObject: frame];
+		}
+
+		CCAnimation *danceAnimation = [CCAnimation animationWithSpriteFrames:animationArray delay:0.1f];
+        
+		// create the action
+		CCAnimate *danceAction = [CCAnimate actionWithAnimation:danceAnimation];
+		CCRepeatForever *repeat = [CCRepeatForever actionWithAction:danceAction];
+        
+		// run the action
+		[hero runAction:repeat];
+        
+        
+      /*
 		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
 		spriteTexture_ = [parent texture];
         
         hero = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,0,32,32)];
         [self addChild:hero z:1];
-        
+        */
         hero.position = ccp(s.width/2,s.height/2);
         
         // Define the dynamic body.
@@ -69,7 +115,7 @@ enum {
         // Define another box shape for our dynamic body.
   
         b2PolygonShape dynamicBox;
-        dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+        dynamicBox.SetAsBox(1.5f, 1.5f);//These are mid points for our 1m box
         // Define the dynamic body fixture.
 
  //       b2CircleShape circle;
@@ -85,7 +131,8 @@ enum {
         [hero setPhysicsBody:body];
 
         
-        PhysicsSprite* enimes = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32,0,400,32)];
+        PhysicsSprite* enimes = [PhysicsSprite spriteWithSpriteFrameName:@"st_2"];
+        //PhysicsSprite* enimes = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32,0,400,32)];
         [self addChild:enimes z:0];
         
         enimes.position = ccp(0,0);
@@ -93,11 +140,11 @@ enum {
         //Set up a 1m squared box in the physics world
         b2BodyDef bodyDef1;
         bodyDef1.type = b2_staticBody;
-        bodyDef1.position.Set(200/PTM_RATIO, 300/PTM_RATIO);
+        bodyDef1.position.Set(447/PTM_RATIO, 290/PTM_RATIO);
         b2Body *body1 = world->CreateBody(&bodyDef1);
         // Define another box shape for our dynamic body.
         b2PolygonShape dynamicBox1;
-        dynamicBox1.SetAsBox(6.3f, .5f);//These are mid points for our 1m box
+        dynamicBox1.SetAsBox(2.1f, .3f);//These are mid points for our 1m box
         // Define the dynamic body fixture.
         b2FixtureDef fixtureDef1;
         fixtureDef1.shape = &dynamicBox1;
@@ -106,8 +153,8 @@ enum {
         body1->CreateFixture(&fixtureDef1);
         [enimes setPhysicsBody:body1];
 
-       
-        PhysicsSprite* enimes1 = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,32,500,32)];
+         PhysicsSprite* enimes1 = [PhysicsSprite spriteWithSpriteFrameName:@"st_1"];
+     //   PhysicsSprite* enimes1 = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,32,500,32)];
         [self addChild:enimes1 z:0];
         
         enimes.position = ccp(0,0);
@@ -119,7 +166,7 @@ enum {
         b2Body *body2 = world->CreateBody(&bodyDef2);
         // Define another box shape for our dynamic body.
         b2PolygonShape dynamicBox2;
-        dynamicBox2.SetAsBox(8.3f, .5f);//These are mid points for our 1m box
+        dynamicBox2.SetAsBox(2.1f, .3f);//These are mid points for our 1m box
         // Define the dynamic body fixture.
         b2FixtureDef fixtureDef2;
         fixtureDef2.shape = &dynamicBox2;
@@ -128,6 +175,27 @@ enum {
         body2->CreateFixture(&fixtureDef2);
         [enimes1 setPhysicsBody:body2];
         
+        
+        PhysicsSprite* enimes2 = [PhysicsSprite spriteWithSpriteFrameName:@"st_3"];
+        [self addChild:enimes2 z:0];
+        enimes2.position = ccp(0,0);
+        // Define the dynamic body.
+        //Set up a 1m squared box in the physics world
+        b2BodyDef bodyDef3;
+        bodyDef3.type = b2_staticBody;
+        bodyDef3.position.Set(280/PTM_RATIO, 310/PTM_RATIO);
+        b2Body *body3 = world->CreateBody(&bodyDef3);
+        // Define another box shape for our dynamic body.
+        b2PolygonShape dynamicBox3;
+        dynamicBox3.SetAsBox(2.1f, .3f);//These are mid points for our 1m box
+        // Define the dynamic body fixture.
+        b2FixtureDef fixtureDef3;
+        fixtureDef3.shape = &dynamicBox3;
+        fixtureDef3.density = 1.0f;
+        fixtureDef3.friction = 0.3f;
+        body3->CreateFixture(&fixtureDef3);
+        [enimes2 setPhysicsBody:body3];
+
         
         [self addLeftJoystic];
         [self addRightJoystic];
@@ -210,6 +278,12 @@ enum {
     //physicSprite
     if (leftJoystick.velocity.x!=0 || leftJoystick.velocity.y!=0){
     b2Body *heroBody = [hero getPhysicsBody];
+        if (newposition.x - hero.position.x <0){
+            hero.flipX = YES;
+         //   hero
+        }else{
+            hero.flipX = NO;
+        }
 //    heroBody->SetLinearVelocity(b2Vec2(newposition.x -hero.position.x-gravity.x,newposition.y - hero.position.y+gravity.y));
     heroBody->SetLinearVelocity(b2Vec2(newposition.x -hero.position.x,newposition.y - hero.position.y));
 //    heroBody->SetTransform(b2Vec2(newposition.x -hero.position.x,newposition.y - hero.position.y), 10);
@@ -267,12 +341,17 @@ enum {
 	CCLOG(@"Add sprite %0.2f x %02.f",p.x,p.y);
 	CCNode *parent = [self getChildByTag:kTagParentNode];
 	
-	//We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
-	//just randomly picking one of the images
-	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
-	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
-	PhysicsSprite *sprite = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32 * idx,32 * idy,32,32)];
-	[parent addChild:sprite];
+    
+    CCSpriteBatchNode *sceneSpriteBatchNode;
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"stonesTexrutes_UntitledSheet-ipadhd.plist"];
+    sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile: @"stonesTexrutes_UntitledSheet.png"];
+    [self addChild:sceneSpriteBatchNode z:0];
+    PhysicsSprite *sprite = [PhysicsSprite spriteWithSpriteFrameName:@"box"];
+  	[self addChild:sprite];
+  
+    
+//	PhysicsSprite *sprite = [PhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32 * idx,32 * idy,32,32)];
+//	[parent addChild:sprite];
 	
 	sprite.position = ccp( p.x, p.y);
 	
